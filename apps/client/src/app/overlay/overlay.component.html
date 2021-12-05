@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="counter" *ngIf="resets$ | async as resets">
+    <div class="box resets">
+      <div>Resets:</div>
+      <div>{{resets.value}}</div>
+    </div>
+  </div>
+  <div class="hunting" *ngIf="hunting$ | async as hunting">
+    <div class="box">
+      <div class="id">
+        <div class="text">Chassé</div>
+        <div class="text">{{hunting.id}}</div>
+      </div>
+      <img [src]="hunting.gif" alt="" class="gif">
+    </div>
+  </div>
+  <div class="counter" *ngIf="progress$ | async as progress">
+    <div class="box progress">
+      {{progress.done}} / {{progress.total}}
+    </div>
+  </div>
+  <div class="caught" *ngIf="caught$ | async as caught">
+    <div class="box">
+      <div class="id">
+        <div class="text">Capturé</div>
+        <div class="text">{{caught.id}}</div>
+      </div>
+      <img [src]="caught.gif" alt="" class="gif">
+    </div>
+  </div>
+</div>

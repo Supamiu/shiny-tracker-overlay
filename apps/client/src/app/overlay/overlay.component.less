@@ -1,0 +1,102 @@
+.container {
+  width: 1920px;
+  height: 1080px;
+
+  background: url("/assets/bg-desktop.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@box-height: 200px;
+@box-width: 300px;
+@top-distance: 850px;
+
+.box {
+  position: relative;
+  height: @box-height;
+  width: @box-width;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress {
+  top: @top-distance;
+  left: 600px;
+  position: absolute;
+  font-size: 50px;
+  color: white;
+
+  background: -webkit-linear-gradient(133deg, rgba(53, 112, 198, .8) 34%, rgba(159, 7, 92, .8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 6px transparent;
+}
+
+.resets {
+  top: @top-distance;
+  left: 0;
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: -webkit-linear-gradient(133deg, rgba(53, 112, 198, .8) 34%, rgba(159, 7, 92, .8) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 6px transparent;
+}
+
+.gif {
+  height: 115%;
+}
+
+.id {
+  position: absolute;
+  top: calc(-1 * (1em + 10px));
+  right: 10px;
+  font-size: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(@box-width - 20px);
+}
+
+.hunting {
+  border: 5px solid white;
+  border-radius: 10px;
+  position: absolute;
+  height: 200px;
+  width: 300px;
+  top: @top-distance;
+  left: 300px;
+  background: rgb(159, 7, 92);
+  background: linear-gradient(133deg, rgba(159, 7, 92, .8) 0%, rgba(53, 112, 198, .8) 73%);
+
+  .text {
+    background: -webkit-linear-gradient(133deg, rgba(53, 112, 198, .8) 34%, rgba(159, 7, 92, .8) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 6px transparent;
+  }
+}
+
+.caught {
+  border: 5px solid white;
+  border-radius: 10px;
+  position: absolute;
+  height: 200px;
+  width: 300px;
+  top: @top-distance;
+  left: 900px;
+  background: rgb(53, 112, 198);
+  background: linear-gradient(133deg, rgba(53, 112, 198, .8) 34%, rgba(159, 7, 92, .8) 100%);
+
+  .text {
+    background: -webkit-linear-gradient(133deg, rgba(159, 7, 92, .8) 0%, rgba(53, 112, 198, .8) 73%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 6px transparent;
+  }
+}

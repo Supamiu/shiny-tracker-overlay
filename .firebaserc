@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "shiny-hunting-overlay": {
+      "hosting": {
+        "client": [
+          "shiny-hunting-overlay"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "shiny-hunting-overlay"
+  }
+}

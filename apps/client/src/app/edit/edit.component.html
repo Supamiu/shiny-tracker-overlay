@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="form-row">
+    <label for="hunting">Chassé:</label>
+    <input type="number" id="hunting" [ngModel]="hunting$ | async" #huntingEdit>
+    <button (click)="setHunting(+huntingEdit.value)">Appliquer</button>
+  </div>
+  <div class="form-row">
+    <label for="caught">Capturé:</label>
+    <input type="number" id="caught" [ngModel]="caught$ | async" #caughtEdit>
+    <button (click)="setCaught(+caughtEdit.value)">Appliquer</button>
+  </div>
+  <div class="form-row">
+    <label>Total:</label>
+    <input type="number" [ngModel]="done$ | async" #doneEdit>/
+    <input type="number" [ngModel]="total$ | async" #totalEdit>
+    <button (click)="setCount(+doneEdit.value, +totalEdit.value)">Appliquer</button>
+  </div>
+  <div class="form-row">
+    <label>Resets:</label>
+    <input type="number" [ngModel]="resets$ | async" #resetsEdit>
+    <button (click)="setResets(+resetsEdit.value)">Appliquer</button>
+  </div>
+
+  <button class="plus" (click)="incrementResets()">+</button>
+</div>
