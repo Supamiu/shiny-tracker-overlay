@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { objectVal } from 'rxfire/database';
 import { Database, ref, runTransaction, set } from '@angular/fire/database';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'shiny-hunting-overlay-edit',
@@ -16,6 +17,11 @@ export class EditComponent {
   public resets$ = objectVal<number>(ref(this.db, '/resets'));
 
   constructor(private db: Database) {
+    fromEvent(document, 'keydown').subscribe((event: any) => {
+      if (event.key === '+') {
+        this.incrementResets();
+      }
+    });
   }
 
   setHunting(hunting: number): void {
